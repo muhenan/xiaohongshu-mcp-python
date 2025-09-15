@@ -1,0 +1,25 @@
+[project]
+name = "xiaohongshu-mcp-python"
+version = "0.1.0"
+description = "Python版本的小红书MCP项目 - 支持登录、检查登录状态、发布内容"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "playwright>=1.40.0",
+    "pydantic>=2.0.0",
+    "loguru>=0.7.0",
+    "mcp[cli]>=1.14.0",
+]
+
+[project.scripts]
+xiaohongshu-login = "xiaohongshu_mcp.login:main"
+xiaohongshu-status = "xiaohongshu_mcp.check_status:main"
+xiaohongshu-publish = "xiaohongshu_mcp.publish:main"
+xiaohongshu-mcp-server = "xiaohongshu_mcp.server:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/xiaohongshu_mcp"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
