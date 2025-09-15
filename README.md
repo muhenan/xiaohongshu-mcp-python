@@ -7,7 +7,7 @@
 - 登录功能 - 支持扫码登录小红书账号
 - 状态检查 - 快速检查当前登录状态
 - 内容发布 - 自动发布图文内容到小红书
-- MCP 集成 - 完整的 MCP 服务器实现，可与 AI 助手集成
+- MCP 集成 - 完整的 MCP 服务器实现，可与 AI 客户端（例如 Cursor、Claude Code、Codex）集成
 
 ## 安装要求
 
@@ -76,7 +76,7 @@ uv run xiaohongshu-publish \
 
 ### 方式二：MCP 服务器
 
-启动 MCP 服务器，可与支持 MCP 协议的 AI 助手集成：
+启动 MCP 服务器，可与支持 MCP 协议的 AI 客户端（例如 Cursor、Claude Code、Codex）集成：
 
 ```bash
 # 启动开发模式 MCP 服务器
@@ -127,8 +127,6 @@ logs/mcp_server.log
 - PNG
 - GIF
 - WebP
-
-## 开发与测试
 
 ### 项目结构
 
